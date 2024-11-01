@@ -6,15 +6,21 @@
     <title>Parte 2</title>
 </head>
 <body>
+    <h1> 
+        Pregunta: ¿Qué sucede si se inicializa el contador con un valor negativo? </h1>
+    <h4>Lo que sucede es que no entra al bucle, sino que aparece el mensaje enseguida</h4>
     <script>
-        let numero = 0;
-
-while (numero >= 0) {
-    numero = parseInt(prompt('Ingresa un número (negativo para terminar):'), 10);
-}
-
-alert('Has ingresado un número negativo. Fin del programa.');
-
+    let numero = 0; 
+    while (numero >= 0) {
+         let input = prompt('Ingresa un número (negativo para terminar):');
+          if (input === null || input.trim() === '' || isNaN(input)) {
+             alert('Por favor, ingresa un número válido.');
+              continue;
+             } 
+             numero = parseInt(input, 10); 
+            } 
+            alert('Has ingresado un número negativo. Fin del programa.');
     </script>
+   
 </body>
 </html>
